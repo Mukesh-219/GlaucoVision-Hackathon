@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - GlaucoVision</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><a href="index.html" style="text-decoration: none; color: inherit;">🔬 GlaucoVision</a></h1>
+            <p class="tagline">Patient Screening Dashboard</p>
+        </div>
+        
+        <div class="dashboard-section">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>Total Screenings</h3>
+                    <p class="stat-value">5</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Last Screening</h3>
+                    <p class="stat-value">Dec 13, 2025</p>
+                </div>
+            </div>
+            
+            <div class="chart-container">
+                <h3>📊 Screening History</h3>
+                <canvas id="screeningChart"></canvas>
+            </div>
+            
+            <div class="next-screening">
+                <h3>📅 Next Appointment</h3>
+                <p class="highlight">Your next screening is due in 6 months</p>
+                <p class="date-detail">Recommended date: June 13, 2026</p>
+            </div>
+            
+            <div class="button-container">
+                <a href="upload.html" class="primary-button">New Screening</a>
+                <a href="index.html" class="secondary-button">Back to Home</a>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
