@@ -3,40 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Upload - GlaucoVision</title>
+    <title>GlaucoVision - Upload</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h1><a href="index.html" style="text-decoration: none; color: inherit;">🔬 GlaucoVision</a></h1>
-            <p class="tagline">Upload Fundus Image for Analysis</p>
+    <div class="mobile-container">
+        <div class="app-header">
+            <h1>Upload</h1>
         </div>
         
-        <div class="upload-section">
-            <h2>Select Eye for Screening</h2>
-            <div class="eye-selection">
-                <div class="eye-option" onclick="selectEye('left')">
-                    <div class="eye-icon">👁️</div>
-                    <h3>Left Eye</h3>
-                </div>
-                <div class="eye-option" onclick="selectEye('right')">
-                    <div class="eye-icon">👁️</div>
-                    <h3>Right Eye</h3>
-                </div>
+        <div class="content-card">
+            <div class="upload-area">
+                <div class="camera-icon">📷</div>
+                <p class="upload-text">Uploading...</p>
+                <p class="upload-subtext">Analyzing Retina Image...</p>
             </div>
             
-            <div class="upload-box" id="uploadBox">
-                <input type="file" id="fileInput" accept="image/*" style="display: none;" onchange="handleFileSelect(event)">
-                <div class="upload-placeholder" onclick="document.getElementById('fileInput').click()">
-                    <div class="upload-icon">📂</div>
-                    <p>Click to upload fundus image</p>
-                    <p class="upload-hint">Supported formats: JPG, PNG (Max 10MB)</p>
-                </div>
-                <img id="preview" style="display: none; max-width: 100%; border-radius: 10px;">
+            <div class="eye-toggle">
+                <button class="eye-button">Left Eye</button>
+                <button class="eye-button active">Right Eye</button>
             </div>
             
-            <button class="primary-button" id="analyzeBtn" style="display: none;" onclick="analyzeImage()">Analyze Image</button>
+            <a href="results.html" class="action-button">Start Analysis</a>
+        </div>
+        
+        <div class="bottom-nav">
+            <a href="index.html" class="nav-item">
+                <span class="nav-icon">🏠</span>
+                <span>Home</span>
+            </a>
+            <a href="dashboard.html" class="nav-item">
+                <span class="nav-icon">📋</span>
+                <span>History</span>
+            </a>
+            <a href="#" class="nav-item">
+                <span class="nav-icon">👤</span>
+                <span>Profile</span>
+            </a>
         </div>
     </div>
     <script src="script.js"></script>
